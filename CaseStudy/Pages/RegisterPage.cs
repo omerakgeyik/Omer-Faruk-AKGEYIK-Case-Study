@@ -67,15 +67,10 @@ namespace CaseStudy.Pages
             Password.EnterText(ConfigReader.GetProperty("Password"));
             ConfrimPassword.EnterText(ConfigReader.GetProperty("ConfirmPassword"));
             PolicyCheckBox.ClickElement();
-            Thread.Sleep(2000);
             js.ExecuteScript("arguments[0].scrollIntoView({block: 'end'});", AcceptBtn);
             AcceptBtn.ClickElement();
-            Thread.Sleep(20000);
             SignUpBtn.ClickElement();
-            Thread.Sleep(6000);
             Assert.IsTrue(OTPPopUp.Displayed);
-
-
         }
 
         public void SelectCountry(string countryName)
